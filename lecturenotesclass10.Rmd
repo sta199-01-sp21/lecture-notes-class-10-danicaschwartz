@@ -178,11 +178,16 @@ roll_results <- tibble(
 ```
 
 ```{r identify_events}
-
+roll_results <- roll_results %>%
+  mutate(event_1 = die_1 ^ 2 == die_2,
+         event_2 = abs(die_1 - die_2) == 4)
+roll_results
 ```
 
 ```{r summarize_rolls}
-
+roll_results %>% 
+  summarize(event_1_prob = mean(event_1),
+            event_2_prob = mean(event_2))
 ```
 
 ## Additional Resources-please look at before Weds.
