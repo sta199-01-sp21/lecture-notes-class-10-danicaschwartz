@@ -114,6 +114,8 @@ prop.table(counts)
 
 How close is this value to the "true" probability?
 
+This value is very close to the "true" probability.
+
 **To summarize our process:**
 
 1. We defined the sample space for our experiment - `marbles`
