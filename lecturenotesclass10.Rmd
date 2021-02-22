@@ -1,7 +1,7 @@
 ---
 title: "Introduction to probability"
-author: ""
-date: ""
+author: "Danica Schwartz"
+date: "02/22/21"
 output: html_document
 editor_options: 
   chunk_output_type: console
@@ -50,16 +50,26 @@ xtabs(~ Treatment + Improved, data = Arthritis) %>%
 
 - How many patients were enrolled in the clinical trial?
 
+  84
+
 - What is the probability a randomly selected patient received the placebo?
+
+  43/84
 
 - What is the probability a randomly selected patient received the placebo
   and had a marked improvement?
   
+  7/84
+  
 - What is the probability a randomly selected patient received the placebo
   and the treatment?
   
+  0
+
 - What is the probability a randomly selected patient had some improvement or
   was on the treatment?
+  
+  48/84
 
 ## Using computer simulations to calculate probabilities
 
@@ -76,6 +86,8 @@ Suppose we draw a single marble from our imaginary box, where all the marbles
 are equally likely to be selected. What is the probability the marble is blue? 
 How about white?
 
+  3/8, 1/8
+  
 We can simulate this "drawing" with the `sample()` function.
 
 ```{r sample}
@@ -117,6 +129,8 @@ color if we make two draws with replacement? We haven't discussed how to
 compute this theoretically yet, but this is what computers are good at.
 
 Before we do this, what is your guess as to what the probability will be?
+
+I am guessing that the probability will be 0.50.
 
 We'll still use `sample()` to run our simulation many times, but we'll
 use `dplyr` functions to compute the relative frequencies.
