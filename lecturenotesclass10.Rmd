@@ -172,7 +172,9 @@ Perform a simulation to compute this empirical probability.
 Write down your guess to the answer before you calculate it.
 
 ```{r simulate_rolls}
-
+roll_results <- tibble(
+   die_1 = replicate(n = 10000, expr = sample(1:6, size = 1)),
+   die_2 = replicate(n = 10000, expr = sample(1:6, size = 1)))
 ```
 
 ```{r identify_events}
